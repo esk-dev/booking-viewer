@@ -54,8 +54,6 @@ import ZoomControl from '@/components/controls/ZoomControl.vue'
 import { useRestaurantTime } from '@/composables/useRestaurantTime.ts'
 
 const { zoomLevel, zoomIn, zoomOut } = useZoom()
-const restaurantTimeZone = computed<string | undefined>(() => restaurantInfo.value?.timezone)
-const { restaurantCurrentTimeFormatted, restaurantNow } = useRestaurantTime(restaurantTimeZone)
 
 const isLoading = ref<boolean>(true)
 const error = ref<Error | null>(null)
@@ -80,7 +78,8 @@ const filteredTables = computed<Table[]>(() => {
   return tablesData.value.filter((table) => zonesToDisplay.has(table.zone))
 })
 
-
+const restaurantTimeZone = computed<string | undefined>(() => restaurantInfo.value?.timezone)
+const { restaurantCurrentTimeFormatted, restaurantNow } = useRestaurantTime(restaurantTimeZone)
 const loadData = async (dateToLoad: string): Promise<void> => {
   if (!dateToLoad) {
     isLoading.value = false

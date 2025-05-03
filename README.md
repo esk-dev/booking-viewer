@@ -1,39 +1,36 @@
-# booking-viewer
+# Просмотр бронирований в ресторане — Тестовое задание Ark Studio
 
-This template should help get you started developing with Vue 3 in Vite.
+Веб-приложение для визуализации бронирований в ресторане, разработанное в рамках тестового задания для Ark Studio.
 
-## Recommended IDE Setup
+📍 **[Демо-приложение](https://booking-viewer-test.netlify.app)**  
+📐 **[Макет в Figma](https://www.figma.com/design/hyd2T0EUXfJ6UYZ0SAjrio)**  
+📊 **[Документация API (Swagger)](https://hh.frontend.ark.software/swagger)**
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Type Support for `.vue` Imports in TS
+## 🔧 Функциональность
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- 📡 Загрузка данных бронирований из API
+- 📅 Переключение дат для просмотра бронирований на другие дни
+- 🗂 Фильтрация зон — включение/отключение отображения по зонам
+- 📌 Фиксированные заголовки таблицы: названия столов — слева, время — сверху
+- ⏱ Отображение времени ресторана (не локального времени пользователя)
+- 📐 Масштабирование таблицы: шаг 16px по горизонтали и 4px по вертикали
+- 🖱 Эффекты наведения на события, соответствующие дизайну
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🛠 Технологии
 
-## Project Setup
+- **Vue + TypeScript**
+- **Axios**
+- **DateFns**
+---
 
-```sh
+## 🚀 Установка и запуск
+
+```bash
+git clone https://github.com/eesk-dev/booking-viewer.git
+cd booking-viewer
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
